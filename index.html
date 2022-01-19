@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+
+		/* Set display to none for image*/
+		#image {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+    <div>
+        <img id="titre" src= "titre.png" alt="speak friend and enter">
+    </div>
+    <div>
+        <input type="image" name="a" src="a.jpg" alt="a" onclick="add(this.id)" id="a">
+        <input type="image" name="b" src="b.jpg" alt="b" onclick="add(this.id)" id="b">
+        <input type="image" name="d" src="d.jpg" alt="d" onclick="add(this.id)" id="d">
+        <input type="image" name="e" src="e.jpg" alt="e" onclick="add(this.id)" id="e">
+        <input type="image" name="f" src="f.jpg" alt="f" onclick="add(this.id)" id="f">
+        <input type="image" name="g" src="g.jpg" alt="g" onclick="add(this.id)" id="g">
+        <input type="image" name="i" src="i.jpg" alt="i" onclick="add(this.id)" id="i">
+        <input type="image" name="l" src="l.jpg" alt="l" onclick="add(this.id)" id="l">
+        <input type="image" name="m" src="m.jpg" alt="m" onclick="add(this.id)" id="m">
+        <input type="image" name="n" src="n.jpg" alt="n" onclick="add(this.id)" id="n">
+        <input type="image" name="o" src="o.jpg" alt="o" onclick="add(this.id)" id="o">
+        <input type="image" name="r" src="r.jpg" alt="r" onclick="add(this.id)" id="r">
+        <input type="image" name="v" src="v.jpg" alt="v" onclick="add(this.id)" id="v">
+        <input type='image' name="clear" src= "clear.jpg" onclick="recommencer()" id="effacer">
+    </div>
+    <div>
+        <input type='image' name="indice" src= "indice.jpg" align='middle' onclick="document.getElementById('orthographe').value='ça prend 2 L';" id="indice">
+        <input type='text' id='orthographe'' value=''>
+    </div>
+    <p></p>
+    <div>
+        <img id="gatesclosed" src= "gandalf.jpg"
+            alt="les portes de la Moria" />
+		<img id="ok" src= "oki2.gif"
+			alt="RdV le vendredi 6 mai :)" style="display: none;"/>   
+    </div>
+
+	<script>
+        var mot = '';
+		function add(lettre) {
+            mot = mot + lettre;
+            if (mot == 'mellon') {
+                document.getElementById('ok').style.display = "block";
+                document.getElementById('gatesclosed').style.display = "none";
+            }
+        }
+
+        function recommencer() {
+            mot ='';
+        }
+	</script>
+</body>
+
+</html>
